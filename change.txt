@@ -1,0 +1,13 @@
+changelog
+start at 19.52 - 11/11/2023
+
+- add controllers folder
+path -> ./lib/<controllers>
+{
+    - add songSectionData.dart to controller folder
+    - add startSongQuiz.dart to controller folder
+}
+
+- change ./lib/homePage.dart content
+- change ./lib/songSection.dart content
+
