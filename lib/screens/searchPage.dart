@@ -143,7 +143,8 @@ class _SearchPageState extends State<SearchPage> {
                               SizedBox(height: 20,),
                               Expanded(child: (displayListsong.isEmpty ==true)
                               ? Center(
-                                child: Column(
+                                child: SingleChildScrollView(
+                                  child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     SizedBox(height: 10*height/100,),
@@ -154,6 +155,7 @@ class _SearchPageState extends State<SearchPage> {
                                     Text("Please check again or try different search term", textAlign: TextAlign.center, style: TextStyle(fontSize: 16),)
                                   ],
                                 ),
+                                )
                               )
                               :ListView.builder(
                                 itemCount: displayListsong.length,
