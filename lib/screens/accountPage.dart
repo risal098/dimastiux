@@ -1,4 +1,5 @@
 import 'package:dimastiui/screens/about_us.dart';
+import 'package:dimastiui/screens/login_page.dart';
 import 'package:dimastiui/screens/tos_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
@@ -95,8 +96,9 @@ void _onItemTapped(int index) {
                       children: [
                         Text(""),
                         Text(""),
-                        Text(""),
-                        Text(""),
+                        (MediaQuery.of(context).size.height>800)?Text(""):Text("User1", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+
+                        (MediaQuery.of(context).size.height>800)?Text("User1", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),):Text(""),
                         Container(
                           alignment: Alignment.centerLeft,
                           child:Column(
@@ -121,8 +123,22 @@ void _onItemTapped(int index) {
         ]
       )
       ),
+      Align(
+        alignment: Alignment.topRight,
+        child: Padding(padding: EdgeInsets.all(10),
+        child: IconButton(onPressed: (){Get.offAll(LoginPage());}, icon: Icon(Icons.logout_rounded, size: 30,), color: Colors.white,),),
+      ),
+      Align(
+        alignment: Alignment.topCenter,
+        child: Padding(padding: EdgeInsets.all(20),
+        child: Text("My Account",
+        style: TextStyle(
+          fontSize: 25,
+          color: Colors.white,
+          fontWeight: FontWeight.bold),)),
+      ),
   
-      Positioned(top:mediaQueryData.size.height*1/3-110,
+      Positioned(top:MediaQuery.of(context).size.height*1/3-110,
       child: profileImage())
       ]
       )

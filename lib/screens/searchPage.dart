@@ -18,8 +18,8 @@ class _SearchPageState extends State<SearchPage> {
   List<String> displayListsong = List.from(SongSectionData.titles!);
   var displayListgsong = List.from(SongSectionData.getTitle!);
   var displayListsinger = List.from(SongSectionData.singer!);
-  var originImage = [SongListDB.songList[0][4], SongListDB.songList[1][4]];
-  var displayListimage = [SongListDB.songList[0][4], SongListDB.songList[1][4]];
+  var originImage = [SongListDB.songList[0][4], SongListDB.songList[1][4], SongListDB.songList[2][4], SongListDB.songList[3][4], SongListDB.songList[4][4], SongListDB.songList[5][4], SongListDB.songList[6][4], SongListDB.songList[7][4], SongListDB.songList[8][4], SongListDB.songList[9][4]];
+  var displayListimage = [SongListDB.songList[0][4], SongListDB.songList[1][4], SongListDB.songList[2][4], SongListDB.songList[3][4], SongListDB.songList[4][4], SongListDB.songList[5][4], SongListDB.songList[6][4], SongListDB.songList[7][4], SongListDB.songList[8][4], SongListDB.songList[9][4]];
   void bestmatch(List<String?> values, String value){
     if (values.length>1){
       int indxbest = value.bestMatch(values).bestMatchIndex;
@@ -147,9 +147,9 @@ class _SearchPageState extends State<SearchPage> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     SizedBox(height: 10*height/100,),
-                                    SvgPicture.asset("assets/images/search_img.svg", width: 70*width/100,),
+                                    SvgPicture.asset("assets/images/search_img.svg", width: (height>width&&height>800)?70*width/100:width/3,),
                                     SizedBox(height: 50,),
-                                    Text("We couldn't found any matches data", textAlign: TextAlign.center, style: TextStyle(color: Color(0xff528DE7), fontSize: 30, fontWeight: FontWeight.bold),),
+                                    Text("We couldn't found any matches data", textAlign: TextAlign.center, style: TextStyle(color: Color(0xff528DE7), fontSize: (height>600)?30:22, fontWeight: FontWeight.bold),),
                                     SizedBox(height: 10,),
                                     Text("Please check again or try different search term", textAlign: TextAlign.center, style: TextStyle(fontSize: 16),)
                                   ],

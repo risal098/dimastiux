@@ -52,7 +52,7 @@ void _onItemTapped(int index) {
                 style: TextStyle(
                     fontSize: 25,
                     color: Colors.white,
-                    fontWeight: FontWeight.w900),
+                    fontWeight: FontWeight.bold),
               ),
             ]),
           ),
