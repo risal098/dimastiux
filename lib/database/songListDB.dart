@@ -3,9 +3,12 @@ class SongListDB{
   static List<List<String>> recSongList=[
     ["A Thousand Years","Christina Perri","","AThousandYears", "assets/song_images/ATY_cover.png"],
     ["7 Years","Lukas Graham","","7Years", "assets/song_images/7Y_cover.png"],
+    ["Happy","Pharrell Williams","","7Years", "assets/song_images/Happy_cover.jpg"]
   ];
   static List<List<String>> recIeltsList=[
     ["Library","Unknown","","AThousandYears"],
+    ["Stationery","Unknown","","AThousandYears"],
+     ["Zoo","Unknown","","AThousandYears"]
     // ["7 Years","Lukas Graham","","7Years"]
   ];
   static List<List<String>> songList=[
