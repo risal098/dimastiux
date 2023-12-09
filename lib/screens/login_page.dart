@@ -1,5 +1,6 @@
 import 'package:dimastiui/screens/lockscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../bar_items/appbar.dart';
 import '../screens/homePage.dart';
@@ -90,6 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                       Image.asset(
                           "assets/images/undraw_Ordinary_day_re_v5hy_1.png",
                           height: 120),
+                      SvgPicture.asset("assets/images/newLogo (2).svg", height: 35,),
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 10),
                         child: Text(status, style: TextStyle(color: Colors.red, fontSize: 12),),

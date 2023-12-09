@@ -1,6 +1,7 @@
 import 'package:dimastiui/controllers/accountMessage.dart';
 import 'package:dimastiui/screens/tos_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../bar_items/appbar.dart';
 import '../screens/login_page.dart';
@@ -75,6 +76,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       SizedBox(
                         height: 20,
                       ),
+                      
+                      SvgPicture.asset("assets/images/newLogo (2).svg", height: 35,),
                       Text(status),
                       Container(
                         height: 60,

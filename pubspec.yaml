@@ -100,6 +100,8 @@ flutter:
     - assets/images/about_us/connect.svg
     - assets/images/about_us/features.svg
     - assets/images/about_us/teams.svg
+    - assets/images/NewLogo.svg
+    - assets/images/newLogo (2).svg
   fonts: 
     - family: Poppins
       fonts: 

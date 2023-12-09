@@ -10,6 +10,7 @@ import './songsection.dart';
 import '../controllers/songSectionData.dart';
 import '../widgets/songlevel.dart';
 import '../controllers/leaderboardData.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'dart:convert';
 import '../controllers/accountData.dart';
@@ -49,10 +50,7 @@ class _HomePage extends State<HomePage> {
           appBar: AppBar(
             title: Container(
                 child: Row(children: [
-              Image.asset(
-                "assets/images/img_logo_1.png",
-                height: 32,
-              ),
+              SvgPicture.asset("assets/images/newLogo (2).svg", height: 35,)
               // Expanded(
               //     child: Container(
               //   //Expanded
