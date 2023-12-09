@@ -8,6 +8,11 @@ import '../widgets/songcard.dart';
 import '../widgets/songlevel.dart';
 import 'package:get/get.dart';
 import '../controllers/songSectionData.dart';
+import '../screens/song_ans_page.dart';
+
+import '../controllers/startSongQuiz.dart';
+
+import '../screens/songsection.dart';
 class SongSection extends StatelessWidget {
   String pageName = "SongSection";
   SongSection({super.key});
@@ -23,6 +28,10 @@ class SongSection extends StatelessWidget {
     var singerist = SongSectionData.singer;
     var getTitleList = SongSectionData.getTitle;
 
+    var recimageList = SongSectionData.recimageLink;
+    var recsongList = SongSectionData.rectitles;
+    var recsingerist = SongSectionData.recsinger;
+    
     var size = MediaQuery.of(context).size;
     var height = size.height;
     var width = size.width;
@@ -112,13 +121,13 @@ class SongSection extends StatelessWidget {
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             children: [
-                              for (int i = 0; i < songList!.length; i++)
+                              for (int i = 0; i < recsongList!.length; i++)
                               Container(
                                 width: 120,
                                 padding: const EdgeInsets.symmetric(horizontal: 5),
                                 child: FavCard(
-                                    SongListDB.songList[i][4],
-                                    songList[i], singerist![i],context),
+                                    recimageList![i],
+                                    recsongList![i], recsingerist![i],context),
                               ),
                             ],
                           ),
@@ -155,7 +164,24 @@ class SongSection extends StatelessWidget {
                               ),
 
                               InkWell(
-                                onTap: () {},
+                                onTap: () async{
+      showLoadingDialog(context);
+      String difficulty = Level.level;
+      if(SongSectionData.audioType=="Ielts"){difficulty="ielts"+difficulty;}
+     int stats=0; int statscode=await StartSong.getBlobData(difficulty,"A Thousand Years","Christina Perri","assets/song_images/ATY_cover.png").timeout(
+                                          const Duration(seconds: 29),
+                      onTimeout: (){
+
+                                          return stats=-1;});
+        if(stats==-1){
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){return SongSection();}));
+        }
+      else{Navigator.pop(context);
+      Get.off(()=>SongAns());}
+      if(statscode==-1){
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){return SongSection();}));
+      }
+      },
                                 child: Container(
                                   alignment: Alignment.center,
                                   height: height * (34 / 800),

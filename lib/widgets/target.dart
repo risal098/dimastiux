@@ -35,7 +35,7 @@ class _TargetCardState extends State<TargetCard> {
             percent: AccountData.weeklyProgresPercentage!/100,
             circularStrokeCap: CircularStrokeCap.round,
             lineWidth: 8,
-            progressColor: Color(0xff528DE7), //Color.fromARGB(255, 8, 43, 95),
+            progressColor: Color.fromARGB(255, 49, 91, 153), //Color.fromARGB(255, 8, 43, 95),
             animation: true,
             animationDuration: 800,
             animateFromLastPercent: true,

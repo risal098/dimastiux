@@ -6,6 +6,9 @@ import '../database/songListDB.dart';
 
 //SongSectionData.audioType
 class SongSectionData{
+  static  List<String>? recimageLink;
+    static  List<String>? rectitles;
+   static  List<String>? recsinger;
    static String? audioType;
   static  List<String>? titles;
   static  List<String>? singer;
@@ -36,6 +39,9 @@ class SongSectionData{
     SongSectionData.singer = [];
     SongSectionData.imageLink = [];
     SongSectionData.getTitle = [];
+      recimageLink= [];
+     rectitles= [];
+  recsinger= [];
   }
   static void itemPrepare2(){
     SongSectionData.titles2 = [];
@@ -81,6 +87,13 @@ class SongSectionData{
        SongSectionData.getTitle?.add(tempList[3]);
       
     }
+
+for(int i=0;i<SongListDB.recSongList.length;i++){
+   List<dynamic> rectempList=SongListDB.recSongList[i];
+    recimageLink?.add(rectempList[4]);
+     rectitles?.add(rectempList[0]);
+  recsinger?.add(rectempList[1]);
+     }
      SongSectionData.fillBasicSongListStatus=true;
     print("lets go 5 ");
     //print(response.statusCode);
@@ -123,7 +136,14 @@ class SongSectionData{
        SongSectionData.imageLink?.add(tempList[2]);
        SongSectionData.getTitle?.add(tempList[3]);
       
+
     }
+     for(int i=0;i<SongListDB.recIeltsList.length;i++){
+   List<dynamic> rectempList=SongListDB.recIeltsList[i];
+    recimageLink?.add(rectempList[3]);
+     rectitles?.add(rectempList[0]);
+  recsinger?.add(rectempList[2]);
+     }
      SongSectionData.fillBasicSongListStatus=true;
     print("lets go 5 ");
     return 200;

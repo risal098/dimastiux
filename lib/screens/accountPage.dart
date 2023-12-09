@@ -8,7 +8,7 @@ import './homePage.dart';
 import './lead_page.dart';
 import './progress.dart';
 import '../controllers/leaderboardData.dart';
-import 'package:http/http.dart' as http;
+
 import 'dart:convert';
 import '../controllers/accountData.dart';
 class AccountPage extends StatefulWidget{
@@ -191,28 +191,7 @@ Widget accountOption(MediaQueryData mediaQueryData){
 Widget statOption(MediaQueryData mediaQueryData){
   return InkWell(
     onTap:()async{
-       if(AccountData.state==1){
-                  var    response= await http.post(Uri.https("bicaraai12.risalahqz.repl.co","getMyData"),
-                  body:AccountData.userId.toString());
-                  var data=jsonDecode(response.body);
-                  
-                  AccountData.weeklyTarget=data[0];
-                  AccountData.weeklyProgress=data[1];
-                  AccountData.weeklyStat=jsonDecode(data[2]);
-  
-            
-                  AccountData.activeDays=data[3];
-                AccountData.activeDaystreaks=data[4];
-                    AccountData.points=data[5];
-                    AccountData.playedSongs=data[6];
-                AccountData.playedIelts=data[7];
-                AccountData.totalReplay=data[8];
-                 AccountData.state=0;
-                  Get.to(()=>ProgressPage());
-                
-      }else{
-      Get.to(()=>ProgressPage());
-        }
+      Get.to(() => ProgressPage());
       },
     child:Container(
     padding: EdgeInsets.all(16),

@@ -54,7 +54,7 @@ class MyBarData extends StatelessWidget {
           .map((data) => BarChartGroupData(x: data.x, barRods: [
                 BarChartRodData(
                   toY: data.y,
-                  color: Color(0xff528DE7), //Color.fromARGB(255, 8, 43, 95),,
+                  color: Color.fromARGB(255, 47, 100, 180), //Color.fromARGB(255, 8, 43, 95),,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(7),
                       topRight: Radius.circular(7)),
@@ -71,25 +71,25 @@ class MyBarData extends StatelessWidget {
       String text = '';
       switch (value.toInt()) {
         case 0:
-          text = 'sun';
+          text = 'Sun';
           break;
         case 1:
-          text = 'mon';
+          text = 'Mon';
           break;
         case 2:
-          text = 'tue';
+          text = 'Tue';
           break;
         case 3:
-          text = 'wed';
+          text = 'Wed';
           break;
         case 4:
-          text = 'thu';
+          text = 'Thu';
           break;
         case 5:
-          text = 'fri';
+          text = 'Fri';
           break;
         case 6:
-          text = 'sat';
+          text = 'Sat';
           break;
       }
 
