@@ -78,20 +78,7 @@ class ProgressPage extends StatelessWidget {
                             fontSize: 18,
                             color: Colors.white),
                       ),
-                      InkWell(
-                        child: Container(
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 83,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: const Color(0xff528DE7)),
-                          child: const Text(
-                            "Set Target",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                      )
+                      
                     ],
                   ),
                   const SizedBox(

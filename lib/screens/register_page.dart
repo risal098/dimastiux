@@ -75,14 +75,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset("assets/images/logo_1.png"),
-                          Text(" Account"),
-                          
-                        ],
-                      ),Text(status),
+                      Text(status),
                       Container(
                         height: 60,
                         padding: EdgeInsets.only(top: 10, right: 10, left: 10),
@@ -251,7 +244,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       Container(
                         width: double.infinity,
-                        margin: EdgeInsets.only(bottom: 20),
+                        margin: EdgeInsets.only(bottom: 20, left: 10, right: 10),
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
@@ -341,7 +334,7 @@ class _RegisterPageState extends State<RegisterPage> {
             children: [
               Text("DISCLAIMER", textAlign: TextAlign.center, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: 3),),
               SizedBox(height: 20,),
-              Text('Before entering this website please read the following information carefully. By entering this site you are acknowledging you have read and agree to the terms and conditions. To acknowledge you have read and agree to the terms and conditions and to enter our website please "I AGREE" our site or please click leave our site.', textAlign: TextAlign.center,),
+              Text('Before entering this website, please read the following information carefully. By entering this site, you acknowledge that you have read and agree to the terms and conditions. To confirm your understanding and acceptance of these terms, and to enter our website, please click "I AGREE". If you do not agree or do not meet the age requirement, please refrain from using our website', textAlign: TextAlign.center,),
               InkWell(
                 onTap: (){
                   MyshowDialog.showToSDialog(context);

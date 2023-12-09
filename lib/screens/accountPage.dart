@@ -64,8 +64,8 @@ void _onItemTapped(int index) {
         alignment: Alignment.center,
       children:[Container(child:Column( //expanded
         children:[ Container(
-                width: mediaQueryData.size.width,
-                height: mediaQueryData.size.height*1/4,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height*1/4,
                 
                 decoration: BoxDecoration(
                   
@@ -262,7 +262,7 @@ Widget TermsOfService(MediaQueryData mediaQueryData, context){
 
 Widget helpOption(MediaQueryData mediaQueryData, context){
   return InkWell(
-    onTap:(){Navigator.push(context, MaterialPageRoute(builder: (context){return AboutUs();}));},
+    onTap:(){MyshowDialog2.showToSDialog(context);},
     child:Container(
     padding: EdgeInsets.all(16),
     width: mediaQueryData.size.width,
