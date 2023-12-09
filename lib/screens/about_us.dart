@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+class MyshowDialog2{
+    static void showToSDialog(BuildContext context){
+    showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) {
+        return AboutUs();
+      },
+    );
+}}
+
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
 

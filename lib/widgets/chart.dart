@@ -54,7 +54,7 @@ class MyBarData extends StatelessWidget {
           .map((data) => BarChartGroupData(x: data.x, barRods: [
                 BarChartRodData(
                   toY: data.y,
-                  color: Color.fromARGB(255, 8, 43, 95),
+                  color: Color(0xff528DE7), //Color.fromARGB(255, 8, 43, 95),,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(7),
                       topRight: Radius.circular(7)),
