@@ -233,7 +233,7 @@ class SongSection extends StatelessWidget {
                         height: 5,
                       ),
                       SizedBox(
-                        height: (height >= 840) ? (height / 2.5) : (height / 3),
+                        height: (height >= 840) ? (height / 2.3) : (height / 3),
                         child: SingleChildScrollView(
                             child: Column(
                           children: [

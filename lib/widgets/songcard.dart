@@ -69,15 +69,19 @@ Widget SongCard(String imageLink, String songName, String singer,String getTitle
             SizedBox(
               width: 10,
             ),
-            Column(
+            SizedBox(
+              width: 2.3/5*MediaQuery.of(context).size.width,
+              child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   songName,
+                  overflow: TextOverflow.ellipsis,
                   style:  TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 ),
-                Text(singer),
+                Text(singer, overflow: TextOverflow.ellipsis,),
               ],
+            ),
             )
           ],
         ),

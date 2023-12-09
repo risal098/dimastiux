@@ -1,3 +1,4 @@
+import 'package:dimastiui/database/songListDB.dart';
 import 'package:dimastiui/screens/searchPage.dart';
 import 'package:flutter/material.dart';
 import '../widgets/searchbar.dart';
@@ -57,10 +58,10 @@ class SeeMore extends StatelessWidget {
                     children: <Widget>[
                        Row(
                         children: <Widget>[
-                          Icon(
+                          IconButton(onPressed: (){Navigator.of(context).pop();}, icon: Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,
-                          ),
+                          ),),
                           SizedBox(
                             width: 10,
                           ),
@@ -106,7 +107,7 @@ class SeeMore extends StatelessWidget {
                           children: [
                            
                             for (int i = 0; i < songList!.length; i++)
-                              SongCard(imageList![i], songList[i], singerist![i],getTitleList![i],context)
+                              SongCard(SongListDB.songList[i][4], songList[i], singerist![i],getTitleList![i],context)
                      
                           ],
                         )),

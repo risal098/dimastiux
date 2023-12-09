@@ -102,6 +102,14 @@ flutter:
     - assets/images/about_us/teams.svg
     - assets/images/NewLogo.svg
     - assets/images/newLogo (2).svg
+    - assets/song_images/HTW_cover.png
+    - assets/song_images/LYS_cover.jpg
+    - assets/song_images/SLY_cover.jpg
+    - assets/song_images/WMYB_cover.jpg
+    - assets/song_images/Happy_cover.jpg
+    - assets/song_images/HFIG_cover.jpg
+    - assets/song_images/AWNW_cover.jpg
+    - assets/song_images/TIM_cover.png
   fonts: 
     - family: Poppins
       fonts: 
