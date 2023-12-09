@@ -29,7 +29,7 @@ Widget SongCard(String imageLink, String songName, String singer,String getTitle
       showLoadingDialog(context);
       String difficulty = Level.level;
       if(SongSectionData.audioType=="Ielts"){difficulty="ielts"+difficulty;}
-     int stats=0; int statscode=await StartSong.getBlobData(getTitle,difficulty,songName,singer,imageLink).timeout(
+     int stats=0; int statscode=await StartSong.getBlobData(difficulty,songName,singer,imageLink).timeout(
                                           const Duration(seconds: 29),
                       onTimeout: (){
 

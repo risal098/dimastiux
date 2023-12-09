@@ -73,15 +73,15 @@ class StartSong{
   return thePlayer;
 }
 
-  static Future<int> getBlobData(String getTitle,String difficulty,String songName,String singer,String imageLink ) async {
+  static Future<int> getBlobData(String difficulty,String songName,String singer,String imageLink ) async {
   print("send 1");
 
   try{
-    print(getTitle);
+  //  print(getTitle);
      if(SongSectionData.audioType=="Ielts"){
-      getTitle="librarian"  ;
+     // getTitle="librarian"  ;
       difficulty="ieltsEasy";
-      print(getTitle );
+    //  print(getTitle );
      }
     /*
     final response=await http.get(Uri.https('bicaraai12.risalahqz.repl.co', 'getAudio2/${getTitle}&${difficulty}'));

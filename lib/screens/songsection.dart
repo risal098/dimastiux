@@ -118,7 +118,7 @@ class SongSection extends StatelessWidget {
                                 padding: const EdgeInsets.symmetric(horizontal: 5),
                                 child: FavCard(
                                     SongListDB.songList[i][4],
-                                    songList[i], singerist![i]),
+                                    songList[i], singerist![i],context),
                               ),
                             ],
                           ),
